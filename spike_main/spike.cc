@@ -1,12 +1,12 @@
 // See LICENSE for license details.
 
-#include "sim.h"
-#include "mmu.h"
-#include "remote_bitbang.h"
-#include "cachesim.h"
-#include "extension.h"
+#include "riscv/sim.h"
+#include "riscv/mmu.h"
+#include "riscv/remote_bitbang.h"
+#include "riscv/cachesim.h"
+#include "riscv/extension.h"
 #include <dlfcn.h>
-#include <fesvr/option_parser.h>
+#include "fesvr/option_parser.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
@@ -26,7 +26,7 @@ static void help()
   fprintf(stderr, "  -l                    Generate a log of execution\n");
   fprintf(stderr, "  -h                    Print this help message\n");
   fprintf(stderr, "  -H                 Start halted, allowing a debugger to connect\n");
-  fprintf(stderr, "  --isa=<name>          RISC-V ISA string [default %s]\n", DEFAULT_ISA);
+  fprintf(stderr, "  --isa=<name>          RISC-V ISA string [default %s]\n", "RV64IMAFDC");
   fprintf(stderr, "  --pc=<address>        Override ELF entry point\n");
   fprintf(stderr, "  --ic=<S>:<W>:<B>      Instantiate a cache model with S sets,\n");
   fprintf(stderr, "  --dc=<S>:<W>:<B>        W ways, and B-byte blocks (with S and\n");
@@ -81,7 +81,7 @@ int main(int argc, char** argv)
   std::unique_ptr<dcache_sim_t> dc;
   std::unique_ptr<cache_sim_t> l2;
   std::function<extension_t*()> extension;
-  const char* isa = DEFAULT_ISA;
+  const char* isa = "RV64IMAFDC";
   uint16_t rbb_port = 0;
   bool use_rbb = false;
 

@@ -5,7 +5,6 @@ AC_ARG_WITH(isa,
 		[Sets the default RISC-V ISA])],
   AC_DEFINE_UNQUOTED([DEFAULT_ISA], "$withval", [Default value for --isa switch]),
   AC_DEFINE_UNQUOTED([DEFAULT_ISA], "RV64IMAFDC", [Default value for --isa switch]))
-
 AC_SEARCH_LIBS([dlopen], [dl dld], [], [
   AC_MSG_ERROR([unable to find the dlopen() function])
 ])
