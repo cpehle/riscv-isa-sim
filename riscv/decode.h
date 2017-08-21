@@ -15,10 +15,10 @@
 #include <string.h>
 #include <strings.h>
 #include "encoding.h"
-#include "config.h"
+// #include "config.h"
 #include "common.h"
-#include "softfloat_types.h"
-#include "specialize.h"
+#include "softfloat/softfloat_types.h"
+#include "softfloat/specialize.h"
 #include <cinttypes>
 
 typedef int64_t sreg_t;

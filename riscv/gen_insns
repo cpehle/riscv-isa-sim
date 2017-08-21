@@ -1,0 +1,1 @@
+ls insns/ | sed -e "s/.h/.cc/" | src_dir=.. xargs make -f riscv.mk.in

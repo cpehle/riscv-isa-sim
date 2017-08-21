@@ -6,8 +6,8 @@
 #include "processor.h"
 #include "devices.h"
 #include "debug_module.h"
-#include <fesvr/htif.h>
-#include <fesvr/context.h>
+#include "fesvr/htif.h"
+#include "fesvr/context.h"
 #include <vector>
 #include <string>
 #include <memory>

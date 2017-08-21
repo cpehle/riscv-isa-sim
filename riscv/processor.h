@@ -3,7 +3,7 @@
 #define _RISCV_PROCESSOR_H
 
 #include "decode.h"
-#include "config.h"
+// #include "config.h"
 #include "devices.h"
 #include <string>
 #include <vector>

@@ -6,7 +6,7 @@
 #include "decode.h"
 #include "trap.h"
 #include "common.h"
-#include "config.h"
+// #include "config.h"
 #include "sim.h"
 #include "processor.h"
 #include "memtracer.h"

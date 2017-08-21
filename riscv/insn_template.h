@@ -2,8 +2,8 @@
 
 #include "mmu.h"
 #include "mulhi.h"
-#include "softfloat.h"
-#include "internals.h"
-#include "specialize.h"
+#include "softfloat/softfloat.h"
+#include "softfloat/internals.h"
+#include "softfloat/specialize.h"
 #include "tracer.h"
 #include <assert.h>

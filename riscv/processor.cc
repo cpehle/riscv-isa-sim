@@ -3,7 +3,7 @@
 #include "processor.h"
 #include "extension.h"
 #include "common.h"
-#include "config.h"
+// #include "config.h"
 #include "sim.h"
 #include "mmu.h"
 #include "disasm.h"
